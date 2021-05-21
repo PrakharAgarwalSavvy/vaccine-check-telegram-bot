@@ -35,36 +35,36 @@ In this bot users will be asked questions and based on the answers ( works as fi
     
        AVAILABLE Response format\
          
-          </b>[PINCODE]</b>\
-          <b>Age group:</b> AGE_GROUP_ANSWER\
-          <b>Hospital Name:</b> HOSPITAL_NAME\
-          <b>Date:</b> AVAILABILITY_DATE\
-          <b>Available Capacity:</b> TOTAL_CAPACITY\
-          <b>Dose 1 Available Capacity:</b> DOSE1 CAPACITY\
-          <b>Dose 2 Available Capacity:</b> DOSE2 CAPACITY\
-          <b>Vaccine:</b> VACCINE_TYPE\
-          <b>Fee type:</b> PAYEMENT_TYPE ( FREE or PAID)\
-          <b>AMOUNT:</b> In case of PAID
+          [PINCODE]
+          Age group: AGE_GROUP_ANSWER
+          Hospital Name:</b> HOSPITAL_NAME
+          Date: AVAILABILITY_DATE
+          Available Capacity: TOTAL_CAPACITY
+          Dose 1 Available Capacity: DOSE1 CAPACITY
+          Dose 2 Available Capacity: DOSE2 CAPACITY
+          Vaccine: VACCINE_TYPE
+          Fee type: PAYEMENT_TYPE ( FREE or PAID)
+          AMOUNT: In case of PAID
 
-     NOT AVAILABLE Reponse\
+     NOT AVAILABLE Reponse
        
-          <b>Vaccines are not available in any center.</b>
+          Vaccines are not available in any center.
 
   - Then user will be given few options
       
-          Wish to change any of the filter and search again ? Please press /continue.\
-          To subscribe with the current filters, press /subscribe. You will get automatic notifications as soon as there will be an update.\       
-          Press /start for a fresh search.\
-          For any help or suggestion. Press /help.\
+          Wish to change any of the filter and search again ? Please press /continue.
+          To subscribe with the current filters, press /subscribe. You will get automatic notifications as soon as there will be an update.       
+          Press /start for a fresh search.
+          For any help or suggestion. Press /help.
           Press /exit to quit searching.
           
       <b>/continue</b> is to give answer to any one of the filter. Rest will remain same.\
-      <b>/subscribe</b> - User can also subscribe and they will get automatic notifications as soon as there will be a change/update from the previous response.\ 
+      <b>/subscribe</b> - User can also subscribe and they will get automatic notifications as soon as there will be a change from the previous response.\
               We are hitting the api on every 15 mins and comparing the current response with the previous one.\
               If the current and previous responses are same there will be no message.\
       <b>/start</b> will begin questions again.\
       <b>/help</b> is for messaging the developer in order to provide suggesion or feed back.\
-      <b>/exit</b> will end the conversion and given answers will be lost.\
+      <b>/exit</b> will end the conversion and given answers will be lost.
   
     <b>NOTE:</b> User can quit any time by one of the given option , it could be quit or done or exit.
 
