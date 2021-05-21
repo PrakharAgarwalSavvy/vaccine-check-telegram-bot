@@ -17,8 +17,7 @@ CHOOSING_NUMS_REGEX = "^(1|2|3|4|5|6|[0-9]+)$"
 
 TELEGRAM_PROFILE_LINK='telegram.me/AgarwalPrakhar'
 
-#BOT_TOKEN='1704296638:AAFnR0SPEwMWTDUtnpDUB3HBd3-wXLZNaSo'
-BOT_TOKEN='1896016720:AAEs2DK_m_R3nMsfp4wv1tt9qWvp9pufIpg'
+BOT_TOKEN='YOUR_BOT_TOKEN_HERE'
 
 RESP_END_MESSAGE= ("Wish to change any of the filter and search again ? Please press /continue. "
                     "\nTo subscribe with the current filters, press /subscribe. You will get automatic notifications as soon as there will be an update."           
