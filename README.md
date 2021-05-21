@@ -6,13 +6,14 @@ In this bot users will be asked questions and based on the answers ( works as fi
 #PREREQUISITS:
 
   - Put your bot token from botfather in config.py
-  - Install all the imported libraries in api_final and main_final
+  - Install all the imported libraries used in api_final and main_final.
  
 #RUN:
 
         python3 main_final.py
 
 #PROCESS:
+
   - To start , user has to type /start or start.
   - Then below questions will be asked one by one
 
