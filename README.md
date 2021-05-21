@@ -31,20 +31,20 @@ In this bot users will be asked questions and based on the answers ( works as fi
       Question 5 -  can only have free or paid or both as answers.          
       
 
-  - Once all answers are given , user will get the response . \
+  - Once all answers are given , user will get the response.
     
-       AVAILABLE Response format\
+       AVAILABLE Response format
          
           [PINCODE]
           Age group: AGE_GROUP_ANSWER
-          Hospital Name:</b> HOSPITAL_NAME
+          Hospital Name: HOSPITAL_NAME
           Date: AVAILABILITY_DATE
           Available Capacity: TOTAL_CAPACITY
-          Dose 1 Available Capacity: DOSE1 CAPACITY
-          Dose 2 Available Capacity: DOSE2 CAPACITY
+          Dose 1 Available Capacity: DOSE1_CAPACITY
+          Dose 2 Available Capacity: DOSE2_CAPACITY
           Vaccine: VACCINE_TYPE
           Fee type: PAYEMENT_TYPE ( FREE or PAID)
-          AMOUNT: In case of PAID
+          AMOUNT: In case of PAID Fee Type
 
      NOT AVAILABLE Reponse
        
