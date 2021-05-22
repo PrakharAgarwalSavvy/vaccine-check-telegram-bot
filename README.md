@@ -61,7 +61,7 @@ In this bot users will be asked questions and based on the answers ( works as fi
           
       <b>/continue</b> is to give answer to any one of the filter. Rest will remain same.\
       <b>/subscribe</b> - User can also subscribe and they will get automatic notifications as soon as there will be a change from the previous response.\
-              We are hitting the api on every 15 mins and comparing the current response with the previous one.\
+              We are hitting the api on every 2 mins and comparing the current response with the previous one.\
               If the current and previous responses are same there will be no message.\
       <b>/start</b> will begin questions again.\
       <b>/help</b> is for messaging the developer in order to provide suggesion or feed back.\
