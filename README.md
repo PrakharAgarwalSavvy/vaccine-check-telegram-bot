@@ -71,9 +71,27 @@ In this bot users will be asked questions and based on the answers ( works as fi
 
 #TO RUN 24*7
   
-   Deploy it in any aws cloud service. I used AWS EC2 instance. Chose Ubuntu 18.04 AMI, installed python over there and ran the below command.
+   - Deploy it in any aws cloud service. I used AWS EC2 instance. Chose Ubuntu 18.04 AMI, installed python over there and ran the below command.
    
-     nohop python3 main_final.py &
+         nohop python3 main_final.py &
    
-   this will run the script in background.
+     this will run the script in background.
+   
+   - Now if you want to stop the above running process , you have to find first find the pid of the background running script and then kill it .
+     Run below command to find the pid
+   
+         ps -fA | grep python  
+     
+     then kill it with below command  
+     
+         sudo kill -9 <PID>
+   
+   - In case you EC2 instance is showing UTC time zone. please follow below steps to modify the timezone.
+     Check your current time zone by
+
+          $ date
+     To change it, run
+
+          $ sudo dpkg-reconfigure tzdata
+     This will show list of geographical areas. Select to narrow down available time zones. Next select city/timezone. And you have changed system to new timezone.
     
