@@ -1,0 +1,8 @@
+pandas
+schedule
+typing
+telegram
+logging
+datetime
+numpy
+requests
