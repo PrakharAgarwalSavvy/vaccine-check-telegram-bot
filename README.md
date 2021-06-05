@@ -1,12 +1,15 @@
 # vaccine-check-telegram-bot
 A telegram bot that gives you available vaccine centers in the given district and pincode. In case pincode is not known, user can search with only district. It also gives feature of automatic notifications on subscribing.
 
-In this bot users will be asked questions and based on the answers ( works as filters ) , they will be provided with the availibality centers .
+In this bot, users will be asked questions and based on the answers ( works as filters ) , they will be provided with the availibality centers .
 
 #PREREQUISITS:
 
   - Put your bot token from botfather in config.py
-  - Install all the imported libraries used in api_final and main_final.
+  - Install all the imported libraries used in api_final and main_final. You can download them manually one by one or you can run the command to install all the imports at       once. requirement.txt file is having all the imports that are required by this project.
+     
+        pip install -r requirements.txt
+    
  
 #RUN:
 
