@@ -3,6 +3,7 @@ from copy import deepcopy
 import logging
 import datetime
 import logging.handlers as handlers
+import numpy
 
 logger = logging.getLogger('MAIN_FINAL')
 logger.setLevel(logging.INFO)
@@ -133,3 +134,15 @@ def print_filters(update,context):
             if(key == 'dose_avail'):
                 msg = msg +  '\n<b>Dose Availability </b>: Dose ' + value  
     send_reply_text(update,msg,'HTML') 
+    
+def get_vaccine_amount(vac_fees,type_vac):
+    if(isinstance(vac_fees, list)):
+        for x in vac_fees:
+            if(x['vaccine'] == type_vac):
+                return x['fee']
+        return '0'
+    elif(isinstance(vac_fees, float)):
+        # if vac_fees colums is null then its nan and of type float .
+        return '0'  
+    else:        
+        return '0'  
