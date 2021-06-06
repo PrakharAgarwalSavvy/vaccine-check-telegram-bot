@@ -34,12 +34,11 @@ def get_availability(answers: Dict[str, str],update):
                    df['available_capacity_dose2'] = df.sessions.apply(lambda x: x['available_capacity_dose2'])
                    df['date'] = df.sessions.apply(lambda x: x['date'])
                    try:
-                      df = df.explode("vaccine_fees") 
-                      df['vaccine_fees'] = np.where((df.vaccine_fees.isnull()) & (df.fee_type == 'Free'),
-                              dict({"fee": '0'}),
-                              df.vaccine_fees)  
-                      df['fee_amount'] = df.vaccine_fees.apply(lambda x: x.get('fee'))
-                   except:
+                      if ("vaccine_fees" in df):
+                          df['fee_amount'] = df.apply(lambda x: utils.get_vaccine_amount(x['vaccine_fees'],x['vaccine']), axis=1)
+                      else:
+                          raise Exception('Vaccine Fees column is not present.')
+                   except Exception as e:
                       df['fee_amount'] = np.where(df.fee_type == 'Free',
                               dict({"fee": '0'}),
                               dict({"fee": 'unknown'}))
@@ -64,9 +63,16 @@ def get_availability(answers: Dict[str, str],update):
 def filter(final_df,answers,date_str,update):
     message=''
     if (not final_df.empty) and (len(final_df)):
-        with open('filter_org.csv', 'w') as f:
-            f.write(final_df.to_csv(index=False))
+    
         final_df.drop_duplicates(inplace=True)
+            
+        final_df.sort_values(by = ['date','pincode','name','address','available_capacity'], axis=0, ascending=[True,True,True,True,False], inplace=True,
+                na_position='first', ignore_index=True)
+            
+        final_df.drop_duplicates(
+            subset = ['date', 'vaccine','min_age_limit','pincode','name','address','state_name','district_name','block_name','fee_type','fee_amount'],
+            keep = 'first',inplace=True)
+
         final_df.rename(columns=cfg.RENAME_MAPPING, inplace=True)
         new_df= None
         
